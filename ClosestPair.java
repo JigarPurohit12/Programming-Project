@@ -129,28 +129,28 @@ public class ClosestPair {
         int[] sizes = {10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000};
         int iterations = 10;
         Random rand = new Random();
-        // Point[] testPoints = new Point[10];
-        // for (int i = 0; i < testPoints.length; i++) {
-        // testPoints[i] = new Point(rand.nextDouble() * 100, rand.nextDouble() *
-        // 100);
-        // }
+        Point[] testPoints = new Point[10];
+        for (int i = 0; i < testPoints.length; i++) {
+        testPoints[i] = new Point(rand.nextDouble() * 100, rand.nextDouble() *
+        100);
+        }
 
-        // double bruteForceResult = bruteForce(testPoints);
-        // System.out.println("Brute Force Result: " + bruteForceResult);
-        // System.out.println("Closest pair indices: " + index1 + " and " + index2);
-        // System.out.println("Closest pair points: (" + testPoints[index1].x + ", " +
-        // testPoints[index1].y + ") and (" + testPoints[index2].x + ", " +
-        // testPoints[index2].y + ")");
+        double bruteForceResult = bruteForce(testPoints);
+        System.out.println("Brute Force Result: " + bruteForceResult);
+        System.out.println("Closest pair indices: " + index1 + " and " + index2);
+        System.out.println("Closest pair points: (" + testPoints[index1].x + ", " +
+        testPoints[index1].y + ") and (" + testPoints[index2].x + ", " +
+        testPoints[index2].y + ")");
 
-        // // Test the divide and conquer method
-        // index1 = -1;
-        // index2 = -1;
-        // double divideResult = closestPair(testPoints);
-        // System.out.println("Divide and Conquer Result: " + divideResult);
-        // System.out.println("Closest pair indices: " + index1 + " and " + index2);
-        // System.out.println("Closest pair points: (" + testPoints[index1].x + ", " +
-        // testPoints[index1].y + ") and (" + testPoints[index2].x + ", " +
-        // testPoints[index2].y + ")");
+        // Test the divide and conquer method
+        index1 = -1;
+        index2 = -1;
+        double divideResult = closestPair(testPoints);
+        System.out.println("Divide and Conquer Result: " + divideResult);
+        System.out.println("Closest pair indices: " + index1 + " and " + index2);
+        System.out.println("Closest pair points: (" + testPoints[index1].x + ", " +
+        testPoints[index1].y + ") and (" + testPoints[index2].x + ", " +
+        testPoints[index2].y + ")");
 
         try (FileWriter writer = new FileWriter("results.txt")) {
             for (int size : sizes) {
